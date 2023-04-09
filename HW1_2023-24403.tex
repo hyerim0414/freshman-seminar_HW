@@ -1,0 +1,55 @@
+\documentclass[10pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{kotex}
+\usepackage{setspace}
+\usepackage{amsmath}
+
+\title{대학원 신입생 세미나 HW1}
+\author{박혜림  통계학과 2023-24403}
+
+
+\begin{document}
+
+\maketitle
+
+\section*{Theorem A.1.4}
+If $P$ is a $\pi-system$ and $L$ is a $\lambda-sysetem$ that contains $P$,
+then $\sigma(P)\; \subset L$\\\\
+Proof.\\
+We will show that
+%(a) if $l(P)$ is the smallest $\lambda-system$ containing $P$ then $l(P)$ is a $\sigma-field$.
+
+$$(a)\; if\; l(P)\; is\; the\; smallest\; \lambda-system\; containing\; P\; then\; l(P)\; is\; a\; \sigma-field.$$
+
+The desired result follows from (a). To see this, note that since $l(P)$ is the smallest $\sigma-field$ and $l(P)$ is the smallest $\lambda-system$ containing $P$ we have
+
+$$\sigma(P)\; \subset \; l(P) \subset \; L$$
+
+To prove (a) we begin by noting that a $\lambda-system$ that is closed under intersection is a $\sigma-field$ since
+
+\begin{align*}
+if \; A \in L\,, \; then \; A^c \; = \Omega-A \; \in L \\
+A \cup B = (A^c \cap B^c)^c \\
+\cup_{i=1}^n \, A_i \uparrow \, \cup_{i=1}^\infty \, A_i \; as \; n \uparrow \infty
+\end{align*}
+
+Thus, it is enough to show 
+$$(b) \; l(P) \; is \; closed \; under \; intersection.$$
+
+To prove (b), we let $g_A \, =\, \{B:\, A\cap B \, \in l(P)\}$ and prove
+$$(c)\; if\; A \in l(P)\; then\; g_A \;is\; a \; \lambda-system.$$
+
+To check this, we note: $(i)\; \omega \in g_A \; since\; A \in l(P).$ \\
+
+$(ii)\; if\; B,\,C \in g_A \;and\; B \supset C \; then\; A \cap (B-C) \, = \, (A \cap B) -(A \cap C) \in l(P)\; since\; A \cap B\,,\; A \cap C \in l(P)\; and\; l(P)\; is\; a\; \lambda-system.$ \\
+
+ $(iii)\; if\; B_n\, \in \, g_A\; and\; B_n \uparrow B\; then\; A\,\cup \,B_n \uparrow \,A\,\cap\,B \, \in \, l(P)\; since\; A\, \cap\,B_n \, \in \,l(P)\; and\; l(P)\; is\; a\; \lambda-system.$\\
+
+To get from (c) to (b), we note that since $P$ is a $\pi-system$, 
+$$if\; A\in P\; then\; g_A \supset P \;and\; so\;(c) \;implies\; g_A \supset l(P)$$
+
+i.e., $if\; A\in P\; and\; B \in l(P)\; then\; A\cap B \,\in l(P)$. \; Interchanging A and B in the last sentence: $if\; A\in l(P)\; and \; B \in P\; then\; A\cap B \in l(P)$ but this implies
+$$if\; A\in l(P)\;then\; g_A \supset P\; and\;so\;(c)\;implies g_A \supset l(P).$$
+This conclusion implies that $if\;A,B \in l(P)\; then\; A \cap B \in  l(P)$, which proves (b) and completes the proof.
+
+\end{document}
